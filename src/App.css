@@ -1,0 +1,73 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin:0;
+  background-color: #eae200
+}
+
+.calculator-grid{
+  margin-left: 31rem;
+  width: 35rem;
+  display:grid;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 8rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+  background-color: #ff9500;
+  padding: 1rem;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 15px;
+}
+.calculator-grid > button{
+  cursor:pointer;
+  font-size: 2rem;
+  border: 1px solid #000000;
+  outline: none;
+}
+
+.calculator-grid > button:hover{
+  background-color: #ff9500;
+}
+
+.calculator-grid > button:active{
+  background-color: #faa630;
+}
+
+.doubleSize{
+  grid-column: span 2;
+}
+
+button.red{
+  background-color: red;
+}
+button.red:hover{
+  background-color: #ff1f1f;
+}
+
+button.red:active{
+  background-color: #ff5b5b
+}
+
+.outputScreen{
+  grid-column: 1/-1;
+  background-color: #09001b;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: .75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.outputScreen .previousNumber{
+  color: rgba(100%, 100%, 100%, 0.75);
+  font-size: 1.5rem;
+}
+
+.outputScreen .currentNumber{
+  color: rgba(100%, 100%, 100%, 1);
+  font-size: 2.5rem;
+}
